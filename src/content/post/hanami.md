@@ -1,19 +1,15 @@
 ---
-publishDate: 2023-09-24T00:00:00Z
-title: 花見（はなみ)
-excerpt: 花見（はなみ）は、樹木に咲いている花、主にサクラの花を鑑賞し、春の訪れを寿ぐ日本古来の風習である。副称は観桜（かんおう）である。
-image: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Maruyama_Koen_hanami.jpg/800px-Maruyama_Koen_hanami.jpg
+publishDate: 2023-09-23
+title: Hanami
+excerpt: Hanami (花見, melihat bunga) atau ohanami adalah tradisi Jepang dalam menikmati keindahan bunga, khususnya bunga sakura.
+image: https://upload.wikimedia.org/wikipedia/commons/2/2a/Castle_Himeji_sakura02.jpg
 tags:
   - hiburan
   - informasi
 ---
 
-# 概要
+# Apa itu Hanami
 
-サクラは、日本全国に広く見られる樹木である。花見で話題になる代表的な品種のソメイヨシノはクローンであるため、各地で「休眠打破」がなされてから各地の春の一時期において、おおむね地域毎に一斉に咲き競い、日本人の季節感を形成する重要な春の風物詩となっている。
+Hanami (花見, melihat bunga) atau ohanami adalah tradisi Jepang dalam menikmati keindahan bunga, khususnya bunga sakura. Mekarnya bunga sakura merupakan lambang kebahagiaan telah tibanya musim semi. Selain itu, hanami juga berarti piknik dengan menggelar tikar untuk pesta makan-makan di bawah pohon sakura.
 
-サクラは開花から散るまでの期間は2週間足らずであり、「花吹雪」となって散り行くその姿は、人の命の儚さになぞらえられたり、または古来、「サクラは人を狂わせる」と言われたりしてきた[1]。
-
-独りで花を眺めるだけでなく、多人数で花見弁当や酒を愉しむ宴会を開くことが伝統的である。花を見ながら飲む花見酒は風流なものではあるが、団体などの場合、乱痴気騒ぎとなることも珍しくない（「諸問題」の項を参照）。陰陽道では、サクラの陰と宴会の陽が対になっていると解釈する。
-
-花見は、訪日外国人旅行の来日目的になったり、風習としてアジアや欧米に伝わったりしている[2]。北半球と南半球は季節が逆転しているため、地域毎に年中行事としての花見の時期は異なる。
+Pohon sakura mekar di Jepang dari akhir Maret hingga awal April (kecuali di Okinawa dan Hokkaido). Prakiraan pergerakan mekarnya bunga sakura disebut garis depan bunga sakura (sakurazensen). Prakiraan ini dikeluarkan oleh direktorat meteorologi dan berbagai badan yang berurusan dengan cuaca. Saat melakukan hanami adalah ketika semua pohon sakura yang ada di suatu tempat bunganya sudah mekar semua.
