@@ -1,29 +1,58 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import HeroText from '~/components/widgets/HeroText.astro';
-import Prices from '~/components/widgets/Pricing.astro';
+import Hero from '~/components/widgets/Hero.astro';
+// import Prices from '~/components/widgets/Pricing.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Steps from '~/components/widgets/Steps.astro';
-import Features3 from '~/components/widgets/Features3.astro';
+// import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+// import Image from '~/components/common/Image.astro';
+
+import alur from '~/assets/images/alur-program.jpg';
+import { Image } from 'astro:assets';
+import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
-  title: 'Pricing',
+  title: 'Alur Program dan Skema Keberangkatan',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
+  <!-- Hero Widget ******************* -->
 
-  <HeroText
-    tagline="Pricing"
-    title="Stellar Pricing for Every Journey"
-    subtitle="Choose the perfect plan that aligns with your cosmic goals."
-  />
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Lihat Program Kami',
+        href: getPermalink('/program'),
+        icon: 'tabler:arrow-badge-down-filled',
+      },
+      { text: 'Penjelasan Detail', href: '#langkah' },
+    ]}
+  >
+    <Fragment slot="title">
+      Alur Program dan Skema Keberangkatan <br />
+      <span class="text-accent dark:text-white highlight"> LPK Hoshi Gakuen Bali</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Berikut adalah alur program dan skema keberangkatan yang akan dilalui peserta didik <span class="font-semibold"
+        >LPK Hoshi Gakuen Bali</span
+      > mulai dari pendaftaran, wawancara, mengikuti pelatihan, keberangkatan, bekerja di Jepang hingga akhirnya pulang
+      ke Indonesia.
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="relative h-0 pb-[56.25%] lg:mb-20">
+        <Image src={alur} alt="Bagan Flowchart dari Alur Program LPK Hoshi Gakuen Bali" class="" />
+      </div>
+    </Fragment>
+  </Hero>
 
   <!-- Pricing Widget ******************* -->
 
-  <Prices
+  <!-- <Prices
     title="Our prices"
     subtitle="Only pay for what you need"
     prices={[
@@ -108,11 +137,11 @@ const metadata = {
         },
       },
     ]}
-  />
+  /> -->
 
   <!-- Features3 Widget ************** -->
 
-  <Features3
+  <!-- <Features3
     title="Price-related features"
     subtitle="Discover the advantages of choosing our plans"
     columns={2}
@@ -149,46 +178,64 @@ const metadata = {
       },
     ]}
     classes={{ container: 'max-w-5xl' }}
-  />
+  /> -->
 
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="A guided journey from plans to creativity"
-    tagline="simplified process"
+    title="Alur program dan skema keberangkatan LPK Hoshi Gakuen Bali."
     isReversed={true}
+    id="langkah"
     items={[
       {
-        title: 'Explore plans',
-        icon: 'tabler:number-1',
+        title: 'Langkah 1: <span class="font-medium">Pendaftaran</span>',
+        description:
+          'Peserta melakukan pendaftaran dan pengumpulan dokumen - dokumen yang nantinya akan digunakan dalam proses verifikasi.',
+        icon: 'tabler:checklist',
       },
       {
-        title: 'Select a plan',
-        icon: 'tabler:number-2',
+        title: 'Langkah 2: <span class="font-medium">Pelatihan Pra-Interview</em>',
+        description:
+          'Peserta yang telah melakukan pendaftaran dan lolos tahap verifikasi dokumen akan melanjutkan ke proses belajar sebelum melakuken interview/wawancara dengan User Jepang (Pra-Interview).',
+        icon: 'tabler:chalkboard',
       },
       {
-        title: 'Sign Up / Log In',
-        icon: 'tabler:number-3',
+        title: 'Langkah 3: <span class="font-medium">Interview</span>',
+        description:
+          'Setelah melakukan pelatihan Pra-Interview, para peserta akan diwawancara langsung dengan User perusahaan-perusahaan dari Jepang.',
+        icon: 'tabler:brand-zoom',
       },
       {
-        title: 'Review order',
-        icon: 'tabler:number-4',
+        title: 'Langkah 4: <span class="font-medium">Medical Check-up (MCU)</span>',
+        description:
+          'Peserta yang lolos Interview dengan user akan melakukan Medical Check-up (MCU) untuk mengecek kondisi fisik apabila peserta memiliki penyakit bawaan. Jika tidak lolos MCU, peserta diwajibkan untuk berobat hingga sembuh.',
+        icon: 'tabler:building-hospital',
       },
       {
-        title: 'Enter payment details',
-        icon: 'tabler:number-5',
+        title: 'Langkah 5: <span class="font-medium">Karantina ± 3 Bulan</span>',
+        description:
+          'Setelah lolos Medical Check-up (MCU), para peserta akan memulai proses karantina selama 3 bulan. Pada masa karantina, para peserta akan diberikan pelatihan bahasa Jepang dan budaya Jepang. Selain itu, akan dilakukan pembuatan dokumen yang dibantu oleh pihak LPK, seperti: paspor, visa, dll.',
+        icon: 'tabler:home-stats',
       },
       {
-        title: 'Confirmation',
-        icon: 'tabler:number-6',
+        title: 'Langkah 6: <span class="font-medium">Berangkat ke Jepang</span>',
+        description:
+          'Setelah melaksanakan proses karantina dan menyelesaikan proses pembuatan dokumen, akan dilakukan reservasi tiket keberangkatan ke Jepang.',
+        icon: 'tabler:plane-departure',
       },
       {
-        title: 'Download and start using the template(s)',
-        icon: 'tabler:number-7',
+        title: 'Langkah 7: <span class="font-medium">Tiba di Jepang dan Mulai Bekerja</span>',
+        description:
+          'Setelah tiba di Jepang, para peserta akan diberi pembekalan dan pelatihan selama 1 bulan di Senta, sebelum akhirnya memulai kontrak bekerja dengan perusahaan di Jepang.',
+        icon: 'tabler:plane-arrival',
+      },
+      {
+        title: 'Ready!',
+        icon: 'tabler:check',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
       alt: 'Steps image',
     }}
   />
@@ -196,34 +243,52 @@ const metadata = {
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Pricing FAQs"
-    subtitle="Choosing the right plan is important, and we're here to answer your questions. If you have queries about our pricing options, you're in the right place."
+    title="Apakah Kalian Memiliki Pertanyaan?"
+    subtitle="Di LPK Hoshi Gakuen Bali, kita percaya bahwa dengan sistem belajar yang efektif, dan efisien dapat membantu peserta pelatihan yang ingin mewujudkan mimpinya untuk menguasai bahasa Jepang dan bekerja di Jepang."
     columns={1}
     items={[
       {
-        title: 'Do the plans come with customer support?',
+        title: 'Apakah ada jumlah maksimal siswa dalam 1 kelas?',
         description:
-          'Absolutely, all plans include access to our dedicated customer support to assist you with any queries or concerns.',
+          'Iya, dalam 1 kelas dibatasi maksimal 15 orang siswa/i. Ini dilakukan agar proses belajar & mengajar dapat lebih fokus dan terarah.',
       },
       {
-        title: 'Is there a trial period for the different plans?',
+        title: 'Apa saja kegiatan yang akan dilakukan selama karantina 3 bulan?',
         description:
-          "Unfortunately, we don't offer trial periods for the plans. However, you can check out our demo section to preview the quality of our templates.",
+          'Selama 3 bulan, para peserta akan mendapatkan pembekalan dan pelatihan bahasa Jepang dan budaya Jepang dari instruktur - instruktur yang telah berpengalaman. Selain itu, para peserta juga akan belajar tentang tata krama dan beberapa peraturan yang akan berguna selama hidup di Jepang.',
       },
       {
-        title: 'Can I switch between plans?',
+        title: 'Apa yang mesti kita lakukan apabila gagal pada saat test wawancara?',
         description:
-          'Certainly! You can easily upgrade or downgrade your plan, at any time, to find the one that best suits your evolving requirements.',
+          'Apabila gagal dalam test wawancara, maka para peserta diwajibkan untuk meningkatkan skill Bahasa Jepangnya lagi. Karena, skill ini yang nantinya akan dinilai saat proses wawancara oleh user Jepang.',
       },
       {
-        title: 'What payment methods do you accept?',
+        title: 'Apa yang mesti kita lakukan apabila gagal pada saat Medical Check-Up?',
         description:
-          'We accept major credit cards and online payment methods to ensure a convenient and secure transaction process.',
+          'Jika hasil dari tes Medical Check-up menunjukan bahwa peserta memiliki penyakit bawaan, maka para peserta diwajibkan melakukan pengobatan intensive secara mandiri hingga akhirnya peserta sembuh dan dapat mengikuti karantina. Namun, apabila pada akhirnya peserta berada pada kondisi yang kurang memungkinan untuk sembuh, maka dengan berat hati peserta bisa dinyatakan tidak lolos untuk ke tahap selanjutnya.',
       },
       {
-        title: 'Are there any hidden fees beyond the displayed cost?',
+        title: 'Apakah proses pembuatan dokumen - dokumen (visa, paspor, dll) rumit dan susah?',
         description:
-          'No, the subscription cost covers all the features and templates listed under each plan. There are no hidden fees or extra charges.',
+          'Iya dan tidak. Pembuatan dokumen seperti Visa dan Pasport dapat menjadi rumit dan susah apabila syarat - syarat pengajuan masih kurang dan belum terpenuhi. Apabila semua syarat - syarat terpenuhi, proses pembuatan dokumen tersebut bisa menjadi mudah.',
+      },
+      {
+        title: 'Metode pembayaran apa saja yang tersedia?',
+        description:
+          'Transfer ke rekening bank kami atau Anda bisa langsung membayar secara cash/tunai ke kantor kami.',
+      },
+      {
+        title: 'Apakah pembayaran bisa dicicil?',
+        description: 'Bisa, Pembayaran bisa dicicil hingga 3X.',
+      },
+      {
+        title: 'Apabila kontrak magang saya sudah habis, bisakah saya memperpanjang lagi?',
+        description: 'Bisa, bahkan Anda bisa mencari pekerjaan lain di Jepang.',
+      },
+      {
+        title: 'Jika saya punya pertanyaan lain, kemanakah saya bisa bertanya?',
+        description:
+          'Anda bisa menghubungi kami di nomor whatsapp, via email, DM Facebook/Instagram yang ada di halaman kontak.',
       },
     ]}
   />
@@ -231,14 +296,19 @@ const metadata = {
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    title="Ready to boost your projects?"
-    subtitle="Join our community of satisfied customers who have transformed their work with our templates."
+    title="Ingin mewujudkan mimpimu bekerja di Jepang?"
     actions={[
       {
         variant: 'primary',
-        text: 'Get started now',
-        href: '/',
+        text: 'Daftar Sekarang',
+        href: 'https://api.whatsapp.com/send?phone=6281928866777&text=%E3%81%93%E3%82%93%E3%81%AB%E3%81%A1%E3%81%AF%21%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut%20tentang%20Program%20Magang%20ke%20Jepang.%20Terima%20kasih.',
       },
     ]}
-  />
+  >
+    <Fragment slot="subtitle">
+      Beergabunglah bersama kami dan teman - teman yang telah bekerja di Jepang melalui <span class="font-semibold"
+        >LPK Hoshi Gakuen Bali</span
+      >
+    </Fragment>
+  </CallToAction>
 </Layout>
