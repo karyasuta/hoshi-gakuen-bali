@@ -10,7 +10,9 @@ import Content from '~/components/widgets/Content.astro';
 // import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-// import { Image } from 'astro:assets';
+import { Image } from 'astro:assets';
+
+import fullerton from '~/assets/partners/fullerton-health.png';
 
 const metadata = {
   title: 'LPK Hoshi Gakuen Bali — Free template for creating websites with Astro + Tailwind CSS',
@@ -401,7 +403,157 @@ const metadata = {
         },
       },
     ]}
+    callToAction={{
+      target: '_blank',
+      text: 'Testimonial lebih banyak...',
+      href: 'https://github.com/onwidget/astrowind',
+      icon: 'tabler:chevron-right',
+    }}
   />
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Testimoni Dari User Jepang"
+    testimonials={[
+      {
+        testimonial: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+        name: 'Putu',
+        job: 'Pegawai Care Giver di Prefektur Gunma',
+        image: {
+          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+          alt: 'Putu Image',
+        },
+      },
+      {
+        testimonial: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+        name: 'Kadek',
+        job: 'Chef Restaurant Indonesia di Tokyo',
+        image: {
+          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Kadek Image',
+        },
+      },
+      {
+        testimonial: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+        name: 'Nyoman',
+        job: 'Pekerja Bidang Pertanian di Prefektur Aichi',
+        image: {
+          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+          alt: 'Nyoman Image',
+        },
+      },
+    ]}
+    callToAction={{
+      target: '_blank',
+      text: 'Testimonial lebih banyak...',
+      href: 'https://github.com/onwidget/astrowind',
+      icon: 'tabler:chevron-right',
+    }}
+  />
+
+  <!-- Logo - logo kerjasama -->
+  <div class="pb-16" style="font-family: 'Lato', sans-serif">
+    <dh-component>
+      <div class="container mx-auto pt-16">
+        <div class="w-11/12 xl:w-2/3 lg:w-2/3 md:w-2/3 mx-auto sm:mb-10 mb-16">
+          <h1
+            tabindex="0"
+            class="focus:outline-none xl:text-5xl md:text-3xl text-xl text-center text-gray-800 font-extrabold mb-5 pt-4"
+          >
+            Partnership <span class="text-accent">LPK Hoshi Gakuen Bali</span>
+          </h1>
+          <p
+            tabindex="0"
+            class="focus:outline-none text-base md:text-lg lg:text-xl text-center text-gray-600 font-normal xl:w-10/12 xl:mx-auto"
+          >
+            Berikut adalah beberapa instansi, lembaga, dan pihak yang telah bekerja sama dengan LPK Hoshi Gakuen Bali
+          </p>
+        </div>
+        <div class="xl:py-16 lg:py-16 md:py-16 sm:py-16 px-15 flex flex-wrap">
+          <div
+            class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r :border-r border-gray-200 xl:pb-10 pb-16 items-center"
+          >
+            <Image src={fullerton} alt="Fullerton Health" tabindex="0" class="focus:outline-none" role="img" />
+          </div>
+          <div
+            class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r border-gray-200 xl:pb-10 pb-16 items-center"
+          >
+            <img
+              tabindex="0"
+              class="focus:outline-none"
+              src="https://cdn.tuk.dev/assets/channel-dark.png"
+              alt="Chanel"
+              role="img"
+            />
+          </div>
+          <div
+            class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b border-gray-200 xl:pb-10 pb-16 pt-4 items-center"
+          >
+            <img
+              tabindex="0"
+              class="focus:outline-none"
+              src="https://cdn.tuk.dev/assets/nike-dark.png"
+              alt="Nike"
+              role="img"
+            />
+          </div>
+          <div
+            class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center lg:border-b xl:border-b lg:border-l xl:border-l border-gray-200 xl:pb-10 pb-16 items-center"
+          >
+            <img
+              tabindex="0"
+              class="focus:outline-none"
+              src="https://cdn.tuk.dev/assets/toyota-dark.png"
+              alt="Toyota"
+              role="img"
+            />
+          </div>
+          <div
+            class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-r lg:border-r border-gray-200 xl:pt-10 items-center"
+          >
+            <img
+              tabindex="0"
+              class="focus:outline-none"
+              src="https://cdn.tuk.dev/assets/gs1-dark.png"
+              alt="GS1"
+              role="img"
+            />
+          </div>
+          <div
+            class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-r lg:border-r border-gray-200 xl:pt-10 items-center"
+          >
+            <img
+              tabindex="0"
+              class="focus:outline-none"
+              src="https://cdn.tuk.dev/assets/berry-dark.png"
+              alt="BlackBerry"
+              role="img"
+            />
+          </div>
+          <div class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:pt-10 lg:pt-10 md:pt-2 pt-16">
+            <img
+              tabindex="0"
+              class="focus:outline-none"
+              src="https://cdn.tuk.dev/assets/min-dark.png"
+              alt="Mini"
+              role="img"
+            />
+          </div>
+          <div
+            class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-l lg:border-l border-gray-200 xl:pt-10 lg:pt-10 md:pt-2 pt-16"
+          >
+            <img
+              tabindex="0"
+              class="focus:outline-none"
+              src="https://cdn.tuk.dev/assets/honda-dark.png"
+              alt="Honda"
+              role="img"
+            />
+          </div>
+        </div>
+      </div>
+    </dh-component>
+  </div>
 
   <!-- CallToAction Widget *********** -->
 
