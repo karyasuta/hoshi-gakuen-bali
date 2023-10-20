@@ -9,9 +9,8 @@ import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 // import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+// import { Image } from 'astro:assets';
 
 const metadata = {
   title: 'LPK Hoshi Gakuen Bali — Free template for creating websites with Astro + Tailwind CSS',
@@ -327,57 +326,47 @@ const metadata = {
                 `}
   /> -->
 
-  <!-- FAQs Widget ******************* -->
+  <!-- Director's word -->
+  <section class="bg-white dark:bg-gray-900">
+    <div class="max-w-6xl px-6 py-10 mx-auto">
+      <!-- <p class="text-xl font-medium text-blue-500">Testimonials</p> -->
 
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that HoshiGakuen offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why HoshiGakuen?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
-    ]}
-  />
+      <h1 class="mt-2 text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
+        Sepatah kata dari Direktur Utama LPK Hoshi Gakuen Bali
+      </h1>
 
-  <!-- Stats Widget ****************** -->
+      <main class="relative z-20 w-full mt-8 md:flex md:items-center xl:mt-12">
+        <div class="absolute w-full bg-blue-600 -z-10 md:h-96 rounded-2xl"></div>
 
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />
+        <div
+          class="w-full p-6 bg-blue-600 md:flex md:items-center rounded-2xl md:bg-transparent md:p-0 lg:px-12 md:justify-evenly"
+        >
+          <!-- <Image
+            class="h-24 w-24 md:mx-6 rounded-full object-cover shadow-md md:h-[32rem] md:w-80 lg:h-[36rem] lg:w-[26rem] md:rounded-2xl"
+            src="https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            alt="Maria's photo"
+          /> -->
+          <img
+            class="h-24 w-24 md:mx-6 rounded-full object-cover shadow-md md:h-[32rem] md:w-80 lg:h-[36rem] lg:w-[26rem] md:rounded-2xl"
+            src="https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            alt="Maria's photo"
+          />
+
+          <div class="mt-2 md:mx-6">
+            <div>
+              <p class="text-xl font-medium tracking-tight text-white">Ni Ketut Mariatika Dewi</p>
+              <p class="text-blue-200">Direktur Utama LPK Hoshi Gakuen Bali</p>
+            </div>
+
+            <p class="mt-4 text-lg leading-relaxed text-white md:text-xl">
+              “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus libero ad tempora
+              doloribus expedita laborum saepe voluptas perferendis delectus assumenda”.
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </section>
 
   <!-- Testimonials Widget *********** -->
 
