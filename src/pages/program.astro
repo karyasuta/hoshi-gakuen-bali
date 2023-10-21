@@ -192,14 +192,19 @@ const metadata = {
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
+    title="Ingin mewujudkan mimpimu bekerja di Jepang?"
     actions={[
       {
         variant: 'primary',
-        text: 'Start exploring',
-        href: '/',
+        text: 'Daftar Sekarang',
+        href: 'https://api.whatsapp.com/send?phone=6281928866777&text=%E3%81%93%E3%82%93%E3%81%AB%E3%81%A1%E3%81%AF%21%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut%20tentang%20Program%20Magang%20ke%20Jepang.%20Terima%20kasih.',
       },
     ]}
-    title="Dive into our template collection"
-    subtitle="Whether you're in business, design, or education, our templates are here to elevate your projects."
-  />
+  >
+    <Fragment slot="subtitle">
+      Beergabunglah bersama kami dan teman - teman yang telah bekerja di Jepang melalui <span class="font-semibold"
+        >LPK Hoshi Gakuen Bali</span
+      >
+    </Fragment>
+  </CallToAction>
 </Layout>
