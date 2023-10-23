@@ -1,4 +1,5 @@
 import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+const currentYear = new Date().getFullYear();
 
 export const headerData = {
   links: [
@@ -90,6 +91,6 @@ export const footerData = {
     // { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],
   footNote: `
-    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://karyasuta.com/"> Karyasuta.com</a> © 2023 LPK Hoshi Gakuen Bali · All rights reserved.
+    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://karyasuta.com/"> Karyasuta.com</a> © ${currentYear} LPK Hoshi Gakuen Bali · All rights reserved.
   `,
 };
