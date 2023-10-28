@@ -1,0 +1,100 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.framework.id": "astro",
+  "frontMatter.preview.host": "http://localhost:4321",
+  "frontMatter.panel.actions.disabled": ["optimizeSlug", "preview", "startStopServer"],
+  "frontMatter.git.enabled": false,
+  "frontMatter.global.activeMode": "minimalist",
+  "frontMatter.global.modes": [
+    {
+      "id": "minimalist",
+      "features": ["panel.actions", "panel.metadata", "panel.contentType", "panel.recentlyModified"]
+    }
+  ],
+  "frontMatter.content.publicFolder": {
+    "path": "/public",
+    "relative": false
+  },
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "post",
+      "path": "[[workspace]]/src/content/post",
+      "filePrefix": null
+    }
+  ],
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "previewPath": "'post'",
+      "pageBundle": false,
+      "clearEmpty": true,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string",
+          "single": true,
+          "description": "Masukkan Judul Disini",
+          "required": true
+        },
+        {
+          "title": "Description",
+          "name": "excerpt",
+          "type": "string",
+          "required": true,
+          "description": "Masukkan Deskripsi Singkat tentang Artikel"
+        },
+        {
+          "title": "Content Image",
+          "name": "image",
+          "type": "image",
+          "isPreviewImage": true
+        },
+        {
+          "title": "Publish Date",
+          "name": "publishDate",
+          "type": "datetime",
+          "isPublishDate": true
+        },
+        {
+          "title": "Draft?",
+          "name": "draft",
+          "type": "draft",
+          "default": false
+        },
+        {
+          "title": "Category",
+          "name": "category",
+          "type": "choice",
+          "choices": [
+            "",
+            "Info Lowongan Magang",
+            "Testimoni Siswa",
+            "Testimoni Partner Kerja Sama",
+            "Kegiatan",
+            "Tentang Jepang"
+          ]
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Metadata",
+          "name": "metadata",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Canonical URL",
+              "name": "canonical",
+              "type": "string",
+              "single": true,
+              "description": "Hanya tulis URL dari post yg telah terpublish (optional)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
